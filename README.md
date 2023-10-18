@@ -1,1 +1,1 @@
-# repo
+It's been a while since I've spent personal time dedicated to creating my own code.  I was too busy working on company work.  But, not that I've been let go (along with many in my company and the entire QA Automation department), I'll have more time so watch this space :)

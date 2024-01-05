@@ -3,7 +3,7 @@ import mysql.connector
 mydb = mysql.connector.connect(
   host="localhost",
   user="jodst",
-  password="DBPlay&me$47",
+  password="DBPlay",
   database="mydatabase"
 )
 
@@ -170,11 +170,12 @@ sql = "SELECT \
 '''
 
 '''Left join - all users even if they dont have a fav '''
+'''
 sql = "SELECT \
   users.name AS user, \
   products.name AS favorite \
   FROM users \
-  LEFT JOIN products ON users.fav = products.prodid"
+  LEFT JOIN products ON users.fav = products.prodid"'''
   
 '''Right join - all products and users that enjoy a fav'''
 sql = "SELECT \

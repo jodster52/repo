@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|c:\\githubrepo\\repo\\specflow\\specflowproject1\\specflowproject1\\utility\\extentreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|solutionrelative:specflowproject1\\utility\\extentreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|c:\\githubrepo\\repo\\specflow\\specflowproject1\\specflowproject1\\features\\googlesearch.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|solutionrelative:specflowproject1\\features\\googlesearch.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|c:\\githubrepo\\repo\\specflow\\specflowproject1\\specflowproject1\\stepdefinitions\\googlesearchstepdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|solutionrelative:specflowproject1\\stepdefinitions\\googlesearchstepdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|c:\\githubrepo\\repo\\specflow\\specflowproject1\\specflowproject1\\hooks\\hooks1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{137841CE-AD0F-4152-99C7-513EE7E32AAA}|SpecFlowProject1\\SpecFlowProject1.csproj|solutionrelative:specflowproject1\\hooks\\hooks1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExtentReport.cs",
+              "DocumentMoniker": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Utility\\ExtentReport.cs",
+              "RelativeDocumentMoniker": "SpecFlowProject1\\Utility\\ExtentReport.cs",
+              "ToolTip": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Utility\\ExtentReport.cs*",
+              "RelativeToolTip": "SpecFlowProject1\\Utility\\ExtentReport.cs*",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAowA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T20:26:46.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hooks1.cs",
+              "DocumentMoniker": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Hooks\\Hooks1.cs",
+              "RelativeDocumentMoniker": "SpecFlowProject1\\Hooks\\Hooks1.cs",
+              "ToolTip": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Hooks\\Hooks1.cs",
+              "RelativeToolTip": "SpecFlowProject1\\Hooks\\Hooks1.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAkwE8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T20:00:51.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GoogleSearchStepDef.cs",
+              "DocumentMoniker": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\StepDefinitions\\GoogleSearchStepDef.cs",
+              "RelativeDocumentMoniker": "SpecFlowProject1\\StepDefinitions\\GoogleSearchStepDef.cs",
+              "ToolTip": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\StepDefinitions\\GoogleSearchStepDef.cs",
+              "RelativeToolTip": "SpecFlowProject1\\StepDefinitions\\GoogleSearchStepDef.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T17:33:36.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GoogleSearch.feature",
+              "DocumentMoniker": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Features\\GoogleSearch.feature",
+              "RelativeDocumentMoniker": "SpecFlowProject1\\Features\\GoogleSearch.feature",
+              "ToolTip": "C:\\gitHubRepo\\repo\\specflow\\SpecFlowProject1\\SpecFlowProject1\\Features\\GoogleSearch.feature",
+              "RelativeToolTip": "SpecFlowProject1\\Features\\GoogleSearch.feature",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQWSURBVDhPdVRLb1tFFP7mPnztaydObOcJcWolhDRpVURQAyWNWgItsGlZ0YoFEgseKxCCFWv4AWzYIxAgQVRVlSo1En1IoDRtSUEpRFWUd9I4DztOff269r18c\u002B0oSRGf9dkzZ2Y\u002BnznnzBH4P3zRGMARXxtHcbKZdMg1uFjCVCmJr9IFzg/Cdd2Dgm\u002BQnylBTISH0Kydhakco0WKGXKZKFDwEfLOJObLV/BN5h42nXxtzYNa\u002BwVeNBScNRPoMs5BNd6FppwUEM8qQmlz4UYBEVGFGhNCtLo6vW5UutGglNDvS8GvZLFc9mT2BF8zWzFgjiCjvwdXDAc1M9JX36MnQp0ia\u002BfQZrbgWEOf8KuGb7OYikARXYjrIXTrj7DjJHG/VJQyVcGYIvC8McwNFzkbUaCorf5mXIifx\u002BmWE1jMrWAwOoC34\u002BcYJuBu\u002Bk95SiEPkRmslZcZglVYrmcEPgqbGPSf4ui04F/XayHYbhl\u002BNYBOM46j4T6ciL2AOtrLtO\u002BDTp7BkH8IH4c9g\u002BZ9G6IPmkj4FX/ombqE\u002BLT3Q6zk1rBgLeO3jdtYyK9gPrcIh\u002B7NZhe8I8RuQp/msJszxhlbVQ\u002BBLrKpgopquzbXBNoDLUjbGUykJykyjzup\u002BxjfuoclXv8JBJj5ZhYVhatxkIiQpu2UsVFMYWLzDyQLG8iWLY9WOYd0aRu2U0LMiKA7lEDMFwWzXj0NBMmYHOwKepCeyW8Zv216Z9kWr\u002BlwEyPLT6PRgJebjuNi51s42TQIkzGuQep44dsVXCctUwugP9yDT3rex6stwzgUiiOshRHW6xE1GuEXfnQE2vFm6wj3fIAIbTXI4k7LQdXnVwIKIuoAX87hfKUokoV13FwfR4f5FE41vQSfZuB49DnPq8cMwZXVa5hgTKcy0yg5JabdHUfaGcWveavq4c38Iubsv1kSy\u002BvFTVxekQcmIT3ua\u002BiBrugIqkGWz2Hv6tfXf8fY2g0vtsQyZu0ZaqTkpOrhbLmIuOZHlx7lM0sUnILuU3TRHmhFzsnhFr3N2DsIaUHMsXymMv\u002BAe1jisijdG7hTuopfrIdSaq85vBOqxxnzdejic1r7afGxLoWqKEJ6ItPiU31MUoXZtinmdZ8k7/wlruV/xvfZDSmz95YXyzYsZw1HjQc8LYu0oeJWZCnVEud6YrTJiRTLkF/jp\u002BxVjLHyi/JR7heUhu1KgcHdRK8xx5UZWmXm5PNqkltqkE3gIUrudxQbxe3CHFIs0Br2BCUsiiYZT00sMUnzvOUOGlVZG0dImYElchxblcu4lR/FWG4GKdfrMrs4KCghl/8quWxHWTbZAnp9IVpkV5nmta/zBj/ibukSvn28yr3e/ffjYMd\u002BEhfqwjgf7OConZyGqCRxKVfED5a3/F8A/wKUXZtBUQWfiQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T17:30:50.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

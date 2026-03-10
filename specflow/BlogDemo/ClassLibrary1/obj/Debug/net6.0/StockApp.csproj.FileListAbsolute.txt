@@ -1,0 +1,12 @@
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\bin\Debug\net6.0\StockApp.deps.json
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\bin\Debug\net6.0\StockApp.dll
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\bin\Debug\net6.0\StockApp.pdb
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.AssemblyInfoInputs.cache
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.AssemblyInfo.cs
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.csproj.CoreCompileInputs.cache
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.sourcelink.json
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.dll
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\refint\StockApp.dll
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\StockApp.pdb
+C:\gitHub\repo\specflow\BlogDemo\ClassLibrary1\obj\Debug\net6.0\ref\StockApp.dll

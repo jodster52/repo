@@ -1,0 +1,12 @@
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\bin\Debug\net6.0\Calc2Try.deps.json
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\bin\Debug\net6.0\Calc2Try.dll
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\bin\Debug\net6.0\Calc2Try.pdb
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.AssemblyInfoInputs.cache
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.AssemblyInfo.cs
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.csproj.CoreCompileInputs.cache
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.sourcelink.json
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.dll
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\refint\Calc2Try.dll
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\Calc2Try.pdb
+C:\gitHub\repo\specflow\Calc2Try\Calc2Try\obj\Debug\net6.0\ref\Calc2Try.dll

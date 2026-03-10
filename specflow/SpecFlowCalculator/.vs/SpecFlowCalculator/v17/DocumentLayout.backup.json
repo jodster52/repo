@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\gitHub\\repo\\specflow\\SpecFlowCalculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1FE0F0F6-BE12-4DFD-8B9D-BE56893C4A5C}|SpecFlowCalculator.Spec\\SpecFlowCalculator.Spec.csproj|c:\\github\\repo\\specflow\\specflowcalculator\\specflowcalculator.spec\\stepdefinitions\\calculatorstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE0F0F6-BE12-4DFD-8B9D-BE56893C4A5C}|SpecFlowCalculator.Spec\\SpecFlowCalculator.Spec.csproj|solutionrelative:specflowcalculator.spec\\stepdefinitions\\calculatorstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FE0F0F6-BE12-4DFD-8B9D-BE56893C4A5C}|SpecFlowCalculator.Spec\\SpecFlowCalculator.Spec.csproj|c:\\github\\repo\\specflow\\specflowcalculator\\specflowcalculator.spec\\features\\calculator.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1FE0F0F6-BE12-4DFD-8B9D-BE56893C4A5C}|SpecFlowCalculator.Spec\\SpecFlowCalculator.Spec.csproj|solutionrelative:specflowcalculator.spec\\features\\calculator.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculatorStepDefinitions.cs",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\SpecFlowCalculator\\SpecFlowCalculator.Spec\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "RelativeDocumentMoniker": "SpecFlowCalculator.Spec\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\SpecFlowCalculator\\SpecFlowCalculator.Spec\\StepDefinitions\\CalculatorStepDefinitions.cs*",
+              "RelativeToolTip": "SpecFlowCalculator.Spec\\StepDefinitions\\CalculatorStepDefinitions.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T16:09:43.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculator.feature",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\SpecFlowCalculator\\SpecFlowCalculator.Spec\\Features\\Calculator.feature",
+              "RelativeDocumentMoniker": "SpecFlowCalculator.Spec\\Features\\Calculator.feature",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\SpecFlowCalculator\\SpecFlowCalculator.Spec\\Features\\Calculator.feature",
+              "RelativeToolTip": "SpecFlowCalculator.Spec\\Features\\Calculator.feature",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-04T16:07:03.278Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

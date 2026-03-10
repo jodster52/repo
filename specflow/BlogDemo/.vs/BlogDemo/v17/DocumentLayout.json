@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\gitHub\\repo\\specflow\\BlogDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|c:\\github\\repo\\specflow\\blogdemo\\blogdemo\\blogdemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|solutionrelative:blogdemo\\blogdemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174A78FC-A232-46A2-A1DD-A692D544FAEF}|ClassLibrary1\\StockApp.csproj|c:\\github\\repo\\specflow\\blogdemo\\classlibrary1\\stockappclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174A78FC-A232-46A2-A1DD-A692D544FAEF}|ClassLibrary1\\StockApp.csproj|solutionrelative:classlibrary1\\stockappclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|c:\\github\\repo\\specflow\\blogdemo\\blogdemo\\stepdefinitions\\asstockappuseriwanttopurchaseaanamountofstockatthelatestvaluesoiincreasemyportfoliovalue_stepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|solutionrelative:blogdemo\\stepdefinitions\\asstockappuseriwanttopurchaseaanamountofstockatthelatestvaluesoiincreasemyportfoliovalue_stepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|c:\\github\\repo\\specflow\\blogdemo\\blogdemo\\features\\stockapp.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7CABDC19-FC28-48B7-A453-EB1513818248}|BlogDemo\\BlogDemo.csproj|solutionrelative:blogdemo\\features\\stockapp.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174A78FC-A232-46A2-A1DD-A692D544FAEF}|ClassLibrary1\\StockApp.csproj|c:\\github\\repo\\specflow\\blogdemo\\classlibrary1\\stockapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{174A78FC-A232-46A2-A1DD-A692D544FAEF}|ClassLibrary1\\StockApp.csproj|solutionrelative:classlibrary1\\stockapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StockApp",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\BlogDemo\\ClassLibrary1\\StockApp.csproj",
+              "RelativeDocumentMoniker": "ClassLibrary1\\StockApp.csproj",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\BlogDemo\\ClassLibrary1\\StockApp.csproj",
+              "RelativeToolTip": "ClassLibrary1\\StockApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-04T19:02:14.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlogDemo",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\BlogDemo.csproj",
+              "RelativeDocumentMoniker": "BlogDemo\\BlogDemo.csproj",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\BlogDemo.csproj",
+              "RelativeToolTip": "BlogDemo\\BlogDemo.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-04T18:52:36.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockAppClass.cs",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\BlogDemo\\ClassLibrary1\\StockAppClass.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\StockAppClass.cs",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\BlogDemo\\ClassLibrary1\\StockAppClass.cs",
+              "RelativeToolTip": "ClassLibrary1\\StockAppClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T18:51:11.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AsStockAppUserIWantToPurchaseAAnAmountOfStockAtTheLatestValueSoIIncreaseMyPortfolioValue_StepDefinitions.cs",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\StepDefinitions\\AsStockAppUserIWantToPurchaseAAnAmountOfStockAtTheLatestValueSoIIncreaseMyPortfolioValue_StepDefinitions.cs",
+              "RelativeDocumentMoniker": "BlogDemo\\StepDefinitions\\AsStockAppUserIWantToPurchaseAAnAmountOfStockAtTheLatestValueSoIIncreaseMyPortfolioValue_StepDefinitions.cs",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\StepDefinitions\\AsStockAppUserIWantToPurchaseAAnAmountOfStockAtTheLatestValueSoIIncreaseMyPortfolioValue_StepDefinitions.cs",
+              "RelativeToolTip": "BlogDemo\\StepDefinitions\\AsStockAppUserIWantToPurchaseAAnAmountOfStockAtTheLatestValueSoIIncreaseMyPortfolioValue_StepDefinitions.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T18:47:50.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StockApp.feature",
+              "DocumentMoniker": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\Features\\StockApp.feature",
+              "RelativeDocumentMoniker": "BlogDemo\\Features\\StockApp.feature",
+              "ToolTip": "C:\\gitHub\\repo\\specflow\\BlogDemo\\BlogDemo\\Features\\StockApp.feature",
+              "RelativeToolTip": "BlogDemo\\Features\\StockApp.feature",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPdVNfSFNhFP/duznd5tRy5N2o1BwoCVJZD0FgulCIXiJqIyiCKIKeequnKGgQ\u002BBSBT770oNtDgv15CKKCGkRgD/WQZCqBcnfnarmcbtO72znfvddNqx/8zs537nd\u002B3znfdybhXxhXfJCwn7x24gb589AxjfOpvPhuwzCMrQIGMaFcInuDyAJOIqNE/EyMIZqaEBELFYG4Ukd2mHidl7WyC8VyCbIkC39NL3CYcROSNIyIqvNCFiETV4nX2Olu7MS78CS6Gzpxse0s3gxM0EmbZ92m0k9YviUQV5rI3iU6drqakFtfQat3D476D\u002BNkIIzVjTXqjvsTcBPv4WlQKNo9DhEbW7278br/MV5qb9H36jR\u002Bln4hmfmAH8WsuauCQ8iX99HvrN3CATaLqypG58bglBzQCkuCX3IzSBczYlMV\u002BHSRYwuISnSjjO/5BZFU0IviAyNU34ZYzy0MKsetiICXjS0wxybka8fD3hgGWo7BX9uMZtcOBOp2wUEVDSn9GOm9LzZbWGBjXm1C6aA7\u002Bko3LXfQacvrOSTDT/BgZhRdDSF0\u002BUI4k7wMj8MDtaBxBr2p0YKoljMriKRmyT7im/62Mg9fTT09tYyP2U94n5lC0K2I9qxkxhgns1M9SEGyz4gHecnPmS0ti0HyON34TU9rIQ3J6ENEm\u002BZFRYAxrvgpMkLeKSJP5nbwfyFC4/zcXG4XYCQCNdTJEeqRp/KCGRRIEa9QMle5ib8FbCQCgzSyL8hbJE7S1juIqmnxrQr/F4gH9lIVPeRNQdZVnFsy41sA/AGfbrS3fsL98AAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-09-04T18:42:43.948Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

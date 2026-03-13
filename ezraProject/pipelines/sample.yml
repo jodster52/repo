@@ -1,0 +1,15 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: PowerShell@2
+    displayName: 'Install project dependencies'
+    continueOnError: true
+    inputs:
+      targetType: 'inline'
+      script: |
+        npm install @playwright/test
+        npx playwright install
+        npm install -D @faker-js/faker
+        npm install dayjs
+#WIP

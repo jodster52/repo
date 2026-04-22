@@ -1,1 +1,12 @@
 node_modules/
+target/
+
+### Intellij ###
+.idea/*
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/*
+

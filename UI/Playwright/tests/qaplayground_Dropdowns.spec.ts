@@ -39,12 +39,24 @@ test('Form Test', async ({ page }) => {
   });
 
   await test.step('Scenario 3: Get all values, pick last one', async () => {
+    const sc3dd = page.locator("#dropdown-language");
 
-    
+    await sc3dd.click();
+    await page.getByText('JavaScript', { exact: true }).click();
+    await expect(page.locator("xpath=//p[contains(@class,'purple')]")).toBeVisible();
+    //await expect(page.getByTestId("#result-language")).toBeVisible();
+    //let resVal = page.getByTestId("#result-language").textContent();
+    //let resVal = page.locator("xpath=//p[contains(@class,'purple')]").innerText();
+    //console.log("Scenario 3 Result: "+resVal);
     
   });
 
   await test.step('Scenario 4: Multi-select', async () => {
+    const sc4dd = page.locator("#dropdown-heroes");
+
+    await sc4dd.selectOption(['Batman','Aquaman']);
+
+    await expect(page.locator("xpath=//p[contains(@class,'orange')]")).toBeVisible();
     
   });
 

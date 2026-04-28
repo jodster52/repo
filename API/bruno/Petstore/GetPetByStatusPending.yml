@@ -1,0 +1,19 @@
+info:
+  name: GetPetByStatusPending
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseURL}}/v2/pet/findByStatus?status=pending"
+  params:
+    - name: status
+      value: pending
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

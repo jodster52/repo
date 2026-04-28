@@ -1,0 +1,50 @@
+name: Bruno API Tests
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bruno-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Install Bruno CLI
+        run: npm install -g @usebruno/cli
+
+      - name: Prepare report directory
+        run: mkdir -p reports
+
+      - name: Run Bruno demo collection
+        working-directory: bruno/Petstore
+        run: |
+          bru run \
+            --global-env ci \
+            --workspace-path ../.. \
+            --tags smoke,workflow,release-gate \
+            --env-var platform_name="GitHub Actions" \
+            --env-var build_id="${{ github.run_id }}" \
+            --env-var commit_sha="${{ github.sha }}" \
+            --reporter-html ../../reports/github-actions-report.html
+
+      - name: Upload Bruno report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: bruno-report
+          path: reports/github-actions-report.html
+          if-no-files-found: error

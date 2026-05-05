@@ -12,6 +12,7 @@ export class CartPage extends BasePage {
     checkoutOverviewHeader = this.page.getByRole('heading', {name: 'Checkout: Overview'});
     checkoutFinishButton = this.page.getByRole('button', {name: 'Finish'});
     checkoutCompleteHeader = this.page.getByRole('heading', {name: 'Checkout: Complete!'});
+    orderCompleteLbl = this.page.getByText("Thank you for your order!");
 
 
     async gotoCartPage() {

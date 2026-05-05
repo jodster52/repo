@@ -4,6 +4,7 @@ export class LoginPage extends BasePage {
     userName = this.page.locator('#email');
     password = this.page.locator('#password');
     loginButton = this.page.getByRole('button', {name: 'Login'});
+    emailErrMsgLbl = this.page.locator("xpath=//label[@for='email']/following::p[1]");
     pwdErrMsgLbl = this.page.locator("xpath=//label[@for='password']/following::p[1]");
 
 

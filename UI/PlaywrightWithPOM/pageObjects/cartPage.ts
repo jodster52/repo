@@ -2,7 +2,7 @@ import { BasePage, expect } from './basePage';
 
 export class CartPage extends BasePage {
     continueShoppingButton = this.page.getByRole('button', {name: 'Continue Shopping'});
-    yourCartHeader = this.page.getByRole('heading', {name: 'Your Cart'});
+    yourCartHeader = this.page.getByRole('heading', {name: 'Your Cart',exact:true});
     yourCartIsEmptyHeader = this.page.getByRole('heading', {name: 'Your cart is empty.'});
     cartList = this.page.locator("xpath=//*[contains(@class,'cart-list')]");
     //checkout

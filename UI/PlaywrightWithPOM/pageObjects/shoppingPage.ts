@@ -11,6 +11,7 @@ export class ShoppingPage extends BasePage {
 
     async gotoCartPage() {
         await this.shoppingCartButton.click();  
+        await this.productsHeader.waitFor({state:'hidden'});
     }
 
 

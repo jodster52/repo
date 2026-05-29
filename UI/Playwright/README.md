@@ -1,1 +1,0 @@
-This project is a general Playwright project without page object modelling.  

@@ -23,6 +23,7 @@ export class LoginPage extends BasePage {
       strategies: [
         { type: 'testId', value: 'username' },
         { type: 'label', value: 'Username' },
+        { type: 'label', value: 'Email' },
         { type: 'placeholder', value: 'Username' },
         { type: 'css', value: '#username' },
         { type: 'css', value: 'input[name="username"]' },
@@ -61,7 +62,8 @@ export class LoginPage extends BasePage {
   }
 
   async open(): Promise<void> {
-    await this.goto('/login');
+    //await this.goto('/login');
+    await this.goto('/'); // Adjust if your app doesn't show the login form on the root page.
   }
 
   async login(username: string, password: string): Promise<void> {

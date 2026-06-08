@@ -27,6 +27,12 @@ npm run test:ui               # Playwright UI mode
 npm run report                # open last HTML report
 ```
 
+## Running Tests
+```
+A single test file and a single browser: 
+npx cross-env ENV=qabrains playwright test tests/login.example.spec.ts --project=chromium
+```
+
 ## Project layout
 
 ```

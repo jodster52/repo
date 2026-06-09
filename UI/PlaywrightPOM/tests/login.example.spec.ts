@@ -22,10 +22,10 @@ test.describe('login (page object + self-healing)', () => {
     await expect(page).not.toHaveURL(/login/i);
   });
 
-  /*test('shows an error with invalid credentials', async ({ loginPage }) => {
+  test('shows an error with invalid credentials', async ({ loginPage }) => {
     await loginPage.open();
     await loginPage.login('invalid-user', 'wrong-password');
 
     expect(await loginPage.errorMessage.isVisible({ timeout: 5_000 })).toBe(true);
-  });*/
+  });
 });

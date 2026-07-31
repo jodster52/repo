@@ -1,0 +1,23 @@
+node_modules/
+dist/
+
+# Playwright outputs
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Secrets — keep .env.example tracked, ignore real env files
+.env
+.env.*
+!.env.example
+
+# Generated self-healing store (machine/run specific)
+healing/locator-store.json
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

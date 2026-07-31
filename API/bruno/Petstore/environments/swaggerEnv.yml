@@ -1,4 +1,0 @@
-name: swaggerEnv
-variables:
-  - name: baseURL
-    value: https://petstore.swagger.io

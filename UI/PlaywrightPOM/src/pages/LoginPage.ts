@@ -1,74 +1,29 @@
-import { Page } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 import { BasePage } from './BasePage';
-import { HealingEngine } from '../healing/HealingEngine';
-import { SelfHealingLocator } from '../healing/SelfHealingLocator';
 
-/**
- * Example page object. Each element lists several locator strategies in priority
- * order. If the markup changes and the first strategy stops matching, the
- * self-healing locator transparently falls back to the next one and records the
- * heal — so a class rename or restructure doesn't immediately break the suite.
- */
+/** Example page object built on BasePage's common method wrappers. */
 export class LoginPage extends BasePage {
-  readonly username: SelfHealingLocator;
-  readonly password: SelfHealingLocator;
-  readonly submit: SelfHealingLocator;
-  readonly errorMessage: SelfHealingLocator;
+  readonly username: Locator;
+  readonly password: Locator;
+  readonly submit: Locator;
+  readonly errorMessage: Locator;
 
-  constructor(page: Page, engine: HealingEngine) {
-    super(page, engine);
+  constructor(page: Page) {
+    super(page);
 
-    this.username = this.heal({
-      name: 'login.username',
-      strategies: [
-        { type: 'testId', value: 'username' },
-        { type: 'label', value: 'Username' },
-        { type: 'label', value: 'Email' },
-        { type: 'placeholder', value: 'Username' },
-        { type: 'css', value: '#username' },
-        { type: 'css', value: 'input[name="username"]' },
-      ],
-    });
-
-    this.password = this.heal({
-      name: 'login.password',
-      strategies: [
-        { type: 'testId', value: 'password' },
-        { type: 'label', value: 'Password' },
-        { type: 'placeholder', value: 'Password' },
-        { type: 'css', value: '#password' },
-        { type: 'css', value: 'input[type="password"]' },
-      ],
-    });
-
-    this.submit = this.heal({
-      name: 'login.submit',
-      strategies: [
-        { type: 'testId', value: 'login-submit' },
-        { type: 'role', value: 'button', name: '/log ?in|sign ?in/i' },
-        { type: 'css', value: 'button[type="submit"]' },
-        { type: 'text', value: 'Login' },
-      ],
-    });
-
-    this.errorMessage = this.heal({
-      name: 'login.error',
-      strategies: [
-        { type: 'testId', value: 'login-error' },
-        { type: 'role', value: 'alert' },
-        { type: 'css', value: '.error, .alert-danger' },
-      ],
-    });
+    this.username = page.getByLabel(/username|email/i);
+    this.password = page.getByLabel('Password');
+    this.submit = page.getByRole('button', { name: /log ?in|sign ?in/i });
+    this.errorMessage = page.locator('form').getByText(/invalid/i);
   }
 
   async open(): Promise<void> {
-    //await this.goto('/login');
     await this.goto('/'); // Adjust if your app doesn't show the login form on the root page.
   }
 
   async login(username: string, password: string): Promise<void> {
-    await this.username.fill(username);
-    await this.password.fill(password);
-    await this.submit.click();
+    await this.fill(this.username, username);
+    await this.fill(this.password, password);
+    await this.click(this.submit);
   }
 }

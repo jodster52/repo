@@ -1,7 +1,7 @@
 {
   "name": "drives-playwright",
   "version": "1.0.0",
-  "description": "Playwright + TypeScript framework with self-healing locators and dotenv-based environment strategies",
+  "description": "Playwright + TypeScript framework with a Page Object Model, dotenv-based environment strategy, and faker.js test data generation",
   "type": "commonjs",
   "scripts": {
     "test": "playwright test",
@@ -12,30 +12,29 @@
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "report": "playwright show-report",
-    "healing:report": "ts-node src/healing/printHealingReport.ts",
-    "healing:reset": "rimraf healing/locator-store.json",
     "codegen": "playwright codegen",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint ."
   },
   "keywords": [
     "playwright",
     "typescript",
-    "self-healing",
+    "page-object-model",
     "dotenv",
+    "faker",
     "e2e",
     "automation"
   ],
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^9.3.0",
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.10.0",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "cross-env": "^7.0.3",
     "eslint": "^10.8.0",
-    "rimraf": "^6.0.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {

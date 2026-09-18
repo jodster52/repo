@@ -1,5 +1,6 @@
 import { test, expect } from '../src/fixtures/baseFixtures';
 import { env } from '../src/config/env';
+import { createFakeUser } from '../src/data/userFactory';
 
 /**
  * Template for a real end-to-end test against the application under test using
@@ -11,7 +12,7 @@ import { env } from '../src/config/env';
 const configured =
   !!env.credentials.username && !!env.credentials.password && !env.baseURL.includes('localhost');
 
-test.describe('login (page object + self-healing)', () => {
+test.describe('login (page object model)', () => {
   test.skip(!configured, 'Set BASE_URL + APP_USERNAME/APP_PASSWORD for the active ENV to enable.');
 
   test('user can sign in with valid credentials', async ({ loginPage, page }) => {
@@ -22,10 +23,13 @@ test.describe('login (page object + self-healing)', () => {
     await expect(page).not.toHaveURL(/login/i);
   });
 
-  test('shows an error with invalid credentials', async ({ loginPage }) => {
-    await loginPage.open();
-    await loginPage.login('invalid-user', 'wrong-password');
+  test('shows an error with invalid (faker-generated) credentials', async ({ loginPage }) => {
+    const bogusUser = createFakeUser();
 
-    expect(await loginPage.errorMessage.isVisible({ timeout: 5_000 })).toBe(true);
+    await loginPage.open();
+    await loginPage.login(bogusUser.email, bogusUser.password);
+
+    await loginPage.waitForVisible(loginPage.errorMessage, 5_000);
+    expect(await loginPage.isVisible(loginPage.errorMessage)).toBe(true);
   });
 });

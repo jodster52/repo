@@ -1,17 +1,18 @@
 # DRIVES Playwright Framework
 
-A Playwright + TypeScript test framework featuring **self-healing locators** and a
-**dotenv-based environment strategy**.
+A Playwright + TypeScript test framework built on a **Page Object Model**, a
+**dotenv-based environment strategy**, and **faker.js** for generated test data.
 
 ## Highlights
 
-- **Self-healing locators** — each element declares several candidate strategies in
-  priority order. If the primary selector stops matching (e.g. a UI refactor), the
-  locator transparently falls back to the next candidate, records the heal, and
-  remembers the working strategy for next time.
+- **Page Object Model** — `BasePage` supplies common method wrappers (`click`,
+  `fill`, `getText`, `isVisible`, `waitForVisible`, `selectOption`, `check`, …)
+  so page objects stay declarative; concrete pages (e.g. `LoginPage`) extend it.
 - **dotenv environment strategy** — a shared `.env` plus per-environment
   `.env.<name>` overrides, selected with the `ENV` variable.
-- **Page Object Model** with fixtures wiring the healing engine into every test.
+- **faker.js test data** — `src/data/` generates realistic fake users/inputs on
+  demand instead of hard-coded fixtures.
+- Fixtures wire page objects into every test (`src/fixtures/baseFixtures.ts`).
 - Multi-browser projects, HTML/JSON reporting, traces, and screenshots on failure.
 
 ## Quick start
@@ -29,7 +30,7 @@ npm run report                # open last HTML report
 
 ## Running Tests
 ```
-A single test file and a single browser: 
+A single test file and a single browser:
 npx cross-env ENV=qabrains playwright test tests/login.example.spec.ts --project=chromium
 ```
 
@@ -42,14 +43,12 @@ npx cross-env ENV=qabrains playwright test tests/login.example.spec.ts --project
 ├── .env.dev / .env.qa / .env.prod# per-environment overrides
 ├── src/
 │   ├── config/env.ts             # dotenv loader + typed env object
-│   ├── healing/                  # self-healing engine
-│   │   ├── SelfHealingLocator.ts # tries candidate strategies, heals, acts
-│   │   ├── HealingEngine.ts      # ordering, event recording, persistence
-│   │   ├── locatorStore.ts       # file-backed last-known-good store
-│   │   ├── buildLocator.ts       # strategy -> Playwright Locator
-│   │   └── types.ts
-│   ├── fixtures/baseFixtures.ts  # `heal`, `healingEngine`, page-object fixtures
-│   └── pages/                    # Page Object Model (BasePage, LoginPage)
+│   ├── pages/                    # Page Object Model
+│   │   ├── BasePage.ts           # common method wrappers used by every page
+│   │   └── LoginPage.ts          # example page object
+│   ├── fixtures/baseFixtures.ts  # page-object fixtures
+│   └── data/
+│       └── userFactory.ts        # faker.js-backed fake data generators
 └── tests/                        # specs
 ```
 
@@ -68,72 +67,38 @@ Real files (`.env`, `.env.*`) are git-ignored; commit only `.env.example`. Injec
 real credentials via your CI secret store rather than committing them.
 
 Supported keys: `BASE_URL`, `API_URL`, `APP_USERNAME`, `APP_PASSWORD`, `HEADLESS`,
-`TIMEOUT`, `RETRIES`, `WORKERS`, `HEALING_ENABLED`, `HEALING_PERSIST`, `HEALING_STORE`.
+`TIMEOUT`, `RETRIES`, `WORKERS`.
 
-## Self-healing locators
+## Page Object Model
 
-Declare an element with multiple strategies, most-preferred first:
-
-```ts
-const username = heal({
-  name: 'login.username',
-  strategies: [
-    { type: 'testId', value: 'username' },     // tried first
-    { type: 'label', value: 'Username' },      // fallback
-    { type: 'css', value: '#username' },        // fallback
-  ],
-});
-
-await username.fill('alice');   // resolves + heals as needed
-```
-
-Supported strategy `type`s: `testId`, `role` (with optional `name`), `label`,
-`placeholder`, `text`, `altText`, `title`, `css`, `xpath`. String values shaped
-like `/pattern/flags` are applied as regular expressions.
-
-### How healing works
-
-1. Strategies are attempted in order. If a remembered last-known-good strategy
-   exists for the element, it is promoted to the front first.
-2. The first strategy whose element reaches the required state (`visible` by
-   default) wins.
-3. If a fallback (not the declared primary) succeeds, a **healing event** is
-   recorded, logged to the console, attached to the test report, and the working
-   strategy is persisted to `healing/locator-store.json`.
-4. If no strategy matches, a descriptive error lists every attempt.
-
-Toggle with `HEALING_ENABLED` / `HEALING_PERSIST`.
-
-### Inspecting heals
-
-```bash
-npm run healing:report   # show which elements have drifted
-npm run healing:reset    # clear the persisted store
-```
-
-## Adding a page object
+Page objects extend `BasePage`, which exposes reusable action wrappers over
+Playwright `Locator`s:
 
 ```ts
-import { Page } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 import { BasePage } from '../src/pages/BasePage';
-import { HealingEngine } from '../src/healing/HealingEngine';
 
 export class DashboardPage extends BasePage {
-  readonly greeting = this.heal({
-    name: 'dashboard.greeting',
-    strategies: [
-      { type: 'testId', value: 'greeting' },
-      { type: 'role', value: 'heading', name: '/welcome/i' },
-    ],
-  });
+  readonly greeting: Locator;
 
-  constructor(page: Page, engine: HealingEngine) {
-    super(page, engine);
+  constructor(page: Page) {
+    super(page);
+    this.greeting = page.getByRole('heading', { name: /welcome/i });
   }
 }
 ```
 
-Expose it as a fixture in `src/fixtures/baseFixtures.ts` to use it directly in tests.
+Expose it as a fixture in `src/fixtures/baseFixtures.ts` to use it directly in tests:
+
 ```ts
 import { test, expect } from '../src/fixtures/baseFixtures';
+```
+
+## Generating test data with faker.js
+
+```ts
+import { createFakeUser } from '../src/data/userFactory';
+
+const user = createFakeUser();               // random first/last name, email, username, password
+const pinned = createFakeUser({ email: 'fixed@example.com' }); // override specific fields
 ```

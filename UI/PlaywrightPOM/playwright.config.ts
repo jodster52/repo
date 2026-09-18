@@ -3,8 +3,10 @@ import { defineConfig, devices } from '@playwright/test';
 import { env } from './src/config/env';
 
 /**
- * Playwright config driven entirely by the dotenv-based environment strategy in
- * `src/config/env.ts`. Switch environments with the `ENV` variable, e.g.:
+ * Playwright config driven by the dotenv-based environment strategy in
+ * `src/config/env.ts`, with a Page Object Model under `src/pages/` and
+ * faker.js-backed test data in `src/data/`. Switch environments with the
+ * `ENV` variable, e.g.:
  *   cross-env ENV=qa playwright test
  */
 export default defineConfig({

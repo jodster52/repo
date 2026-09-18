@@ -28,7 +28,6 @@ const envFile = path.resolve(root, `.env.${ENV}`);
 if (fs.existsSync(envFile)) {
   dotenv.config({ path: envFile, override: true });
 } else {
-  // eslint-disable-next-line no-console
   console.warn(
     `[env] No environment file found for "${ENV}" at ${envFile}. ` +
       `Falling back to base .env / process defaults.`,
@@ -58,12 +57,6 @@ export interface AppEnv {
   timeout: number;
   retries: number;
   workers: number | undefined;
-  healing: {
-    enabled: boolean;
-    /** Persist last-known-good strategies between runs. */
-    persist: boolean;
-    storePath: string;
-  };
 }
 
 export const env: AppEnv = {
@@ -78,11 +71,10 @@ export const env: AppEnv = {
   timeout: num(process.env.TIMEOUT, 30_000),
   retries: num(process.env.RETRIES, 0),
   workers: process.env.WORKERS ? num(process.env.WORKERS, 1) : undefined,
-  healing: {
-    enabled: bool(process.env.HEALING_ENABLED, true),
-    persist: bool(process.env.HEALING_PERSIST, true),
-    storePath: process.env.HEALING_STORE ?? path.join('healing', 'locator-store.json'),
-  },
 };
+
+console.log(
+  `[env] ENV=${env.name} — loaded .env${fs.existsSync(envFile) ? ` + .env.${ENV}` : ' (no .env.' + ENV + ' found)'} → baseURL=${env.baseURL}`,
+);
 
 export default env;

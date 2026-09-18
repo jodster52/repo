@@ -18,9 +18,9 @@
     "baseUrl": ".",
     "paths": {
       "@config/*": ["src/config/*"],
-      "@healing/*": ["src/healing/*"],
       "@pages/*": ["src/pages/*"],
-      "@fixtures/*": ["src/fixtures/*"]
+      "@fixtures/*": ["src/fixtures/*"],
+      "@data/*": ["src/data/*"]
     }
   },
   "include": ["src", "tests", "playwright.config.ts"],

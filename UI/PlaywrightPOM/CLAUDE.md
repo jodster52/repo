@@ -18,10 +18,7 @@ npm run test:debug                     # Playwright debug mode
 npm run report                         # open last HTML report
 
 npm run typecheck                      # tsc --noEmit
-npm run lint                           # eslint . --ext .ts (currently broken — see Known issues)
-
-npm run healing:report                 # print which elements have drifted/healed
-npm run healing:reset                  # clear healing/locator-store.json
+npm run lint                           # eslint . (flat config, eslint.config.js)
 ```
 
 Run a single test file / project:
@@ -42,41 +39,35 @@ this module first, so its dotenv side effects (loading `.env` then `.env.<ENV>` 
 `dev`) selects the active environment. Real `.env*` files are git-ignored; only
 `.env.example` is committed — inject real credentials via CI secrets, not the files.
 
-**Self-healing locators (`src/healing/`)** — the core differentiator of this framework.
-Page objects declare each element as an `ElementDefinition`: a name plus an ordered list
-of candidate `LocatorStrategy` objects (`testId`, `role`, `label`, `placeholder`, `text`,
-`altText`, `title`, `css`, `xpath`). `SelfHealingLocator` tries strategies in order (with
-any previously-remembered last-known-good strategy promoted to the front); the first one
-that resolves wins. When a fallback (not the declared primary) succeeds, `HealingEngine`
-records a healing event, attaches it to the test report, and persists the working
-strategy to `healing/locator-store.json` (file-backed, shape defined in
-`src/healing/types.ts`) so future runs try the working strategy first. Toggle via
-`HEALING_ENABLED` / `HEALING_PERSIST` env vars. `buildLocator.ts` is the only place that
-turns a `LocatorStrategy` into an actual Playwright `Locator` — string values shaped like
-`/pattern/flags` are treated as regexes there.
+**Page objects (`src/pages/`)** — subclass `BasePage`, which supplies common method
+wrappers over Playwright `Locator`s (`click`, `fill`, `type`, `getText`, `isVisible`,
+`waitForVisible`, `waitForHidden`, `selectOption`, `check`, `uncheck`, `hover`), plus
+`goto()` (relative to `env.baseURL`) and `baseURL`. Concrete pages (e.g. `LoginPage`)
+declare their locators in the constructor and compose the wrappers into higher-level
+actions (e.g. `login()`). New page objects should be exposed as a fixture in
+`baseFixtures.ts` rather than instantiated ad hoc in tests.
 
-**Fixtures (`src/fixtures/baseFixtures.ts`)** — extends Playwright's `test` with:
-- `healingEngine` — one `HealingEngine` instance per test, finalized (report attachment)
-  in teardown.
-- `heal` — a factory bound to the test's `page` + `healingEngine` for building
-  `SelfHealingLocator`s inline, without a page object.
-- Page-object fixtures (e.g. `loginPage`) — each wraps a `BasePage` subclass with the
-  same `page` + `healingEngine`.
+**Fixtures (`src/fixtures/baseFixtures.ts`)** — extends Playwright's `test` with
+page-object fixtures (e.g. `loginPage`) bound to the test's `page`. Specs must import
+`test`/`expect` from `../src/fixtures/baseFixtures`, not directly from
+`@playwright/test`, so new page-object fixtures stay in one place.
 
-Specs must import `test`/`expect` from `../src/fixtures/baseFixtures`, not directly from
-`@playwright/test`, to get healing wired in.
+**Test data (`src/data/`)** — `@faker-js/faker`-backed factories (e.g.
+`createFakeUser()` in `userFactory.ts`) generate realistic input data per test run
+instead of hard-coded fixtures. Factories accept a `Partial<T>` overrides argument so
+specific fields can be pinned when a test needs a deterministic value.
 
-**Page objects (`src/pages/`)** — subclass `BasePage`, which supplies `heal()` (scoped
-`SelfHealingLocator` builder), `goto()` (relative to `env.baseURL`), and `baseURL`. New
-page objects should be exposed as a fixture in `baseFixtures.ts` rather than
-instantiated ad hoc in tests.
-
-**Path aliases** — `tsconfig.json` defines `@config/*`, `@healing/*`, `@pages/*`,
-`@fixtures/*` mapping into `src/*`, but note Playwright/ts-node do not resolve these
+**Path aliases** — `tsconfig.json` defines `@config/*`, `@pages/*`, `@fixtures/*`,
+`@data/*` mapping into `src/*`, but note Playwright/ts-node do not resolve these
 automatically at runtime; existing code uses relative imports throughout.
 
-## Known issues
+## Linting
 
-- `npm run lint` is currently broken: ESLint 9+ requires a flat `eslint.config.js`, but
-  this repo only has the legacy `.eslintrc.json`. Needs a migration, not a version
-  downgrade.
+`eslint.config.js` is a flat config (ESLint 9+ requires this format; the legacy
+`.eslintrc.json` no longer works and has been removed). It layers `@eslint/js`'s
+recommended rules with `@typescript-eslint`'s recommended rules for `**/*.ts`, and
+disables `no-undef` for TS files per typescript-eslint's guidance (the TS compiler
+already catches undefined-variable errors, and `no-undef` false-positives on TS-only
+constructs like ambient types). Node globals for both the `.ts` sources and the config
+file itself are declared inline in `eslint.config.js` rather than pulling in the
+`globals` package, since this project only ever runs under Node.

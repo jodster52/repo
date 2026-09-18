@@ -12,9 +12,6 @@ playwright/.cache/
 .env.*
 !.env.example
 
-# Generated self-healing store (machine/run specific)
-healing/locator-store.json
-
 # Editor / OS
 .vscode/
 .idea/
